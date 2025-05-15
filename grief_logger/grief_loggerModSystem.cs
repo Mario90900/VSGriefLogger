@@ -287,6 +287,7 @@ namespace grieflogger
             try
             {
                 LandClaim[] claims = entity.World.Claims.Get(pos);
+                if (claims == null) return false;
                 return claims.Length > 0;
             }
             catch (Exception e)
